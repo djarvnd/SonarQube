@@ -1,0 +1,4 @@
+Start the Sonar by ./sonarqube-6.x/bin/linux-x86-64/sonar.sh
+cd proj-directory
+mvn sonar:sonar
+http://serveripaddress:9000
