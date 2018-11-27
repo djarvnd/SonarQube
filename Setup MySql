@@ -1,0 +1,9 @@
+Install MySQL Server
+wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+Installs repo file → sudo rpm -ivh mysql.rpm
+sudo yum -y install mysql-server
+sudo systemctl start mysqld
+Starts on port 3306
+ps -ef | grep mysql
+sudo mysql_secure_installation
+sudo mysql -u root -p
