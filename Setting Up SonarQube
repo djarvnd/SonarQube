@@ -1,0 +1,13 @@
+Download SonarQube
+wget https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-6.7.3.zip
+unzip sonarqube-6.x.zip
+CREATE DATABASE sonar;
+CREATE USER 'sonar' IDENTIFIED BY 'sonar';
+GRANT ALL ON sonar.* TO 'sonar'@'localhost' IDENTIFIED BY 'sonar';
+FLUSH PRIVILEGES;
+Change sonar configuration in sonarqube-6.x/conf/sonar.properties
+sonar.jdbc.username=sonar
+sonar.jdbc.password=sonar
+uncomment sonar.jdbc.url of MySQL 5.6
+uncomment sonar.web.host=0.0.0.0
+uncomment sonar.web.port=9000
